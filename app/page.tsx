@@ -2,11 +2,10 @@
 import { getIncomingServices, getServicesByRangeDate } from "@/src/api/serviceAPI";
 import CardDashboard from "@/src/components/cards/CardDashboard";
 import CardDashboardBest from "@/src/components/cards/CardDashboardBest";
-import CardDashboardGanancias from "@/src/components/cards/CardDashboardGanancias";
 import CardIconConfig from "@/src/components/cards/CardIconConfig";
 import { SelectMonth, SelectYear } from "@/src/components/ui/Selects";
 import { evalDate, formatLongDate } from "@/src/lib";
-import { DashboardDocumentsData, Servicio } from "@/src/types";
+import {  Servicio } from "@/src/types";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 

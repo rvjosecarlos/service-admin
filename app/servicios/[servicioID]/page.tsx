@@ -6,7 +6,7 @@ import ServicioDetail from "@/src/components/documentView/ServicioDetail";
 import Modal from "@/src/components/ui/Modal";
 import ModalEdit from "@/src/components/ui/ModalEdit";
 import { Servicio } from "@/src/types";
-import { notFound, useParams, useSearchParams } from "next/navigation";
+import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 /*

@@ -40,7 +40,7 @@ export const numberToWords = (num: number) => {
     const teens = ["diez", "once", "doce", "trece", "catorce", "quince", "dieciséis", "diecisiete", "dieciocho", "diecinueve"];
     const tens = ["", "", "veinte", "treinta", "cuarenta", "cincuenta", "sesenta", "setenta", "ochenta", "noventa"];
     const hundreds = ["", "ciento", "doscientos", "trescientos", "cuatrocientos", "quinientos", "seiscientos", "setecientos", "ochocientos", "novecientos"];
-    const thousands = ["", "mil"];
+    //const thousands = ["", "mil"];
     const millions = ["", "un millón"];
 
     function convertToWords(num: number): string {

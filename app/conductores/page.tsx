@@ -5,7 +5,7 @@ import { PrimaryButton, OutlineButton } from "@/src/components/ui/Buttons";
 import ModalAdd from "@/src/components/ui/ModalAdd";
 import { Conductores } from "@/src/types";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 
 
 export default function ConductoresPage(){
@@ -20,7 +20,7 @@ export default function ConductoresPage(){
     },[]);
 
     if(conductores) return(
-        <>
+        <Suspense>
             <div className="flex justify-between items-center mb-5">
                 <Link href={'/'}>
                     <OutlineButton>Inicio</OutlineButton>
@@ -36,6 +36,6 @@ export default function ConductoresPage(){
                 </div>                
             </section>
             <ModalAdd documentType="conductor"/>
-        </>
+        </Suspense>
     )
 }

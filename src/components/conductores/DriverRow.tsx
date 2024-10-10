@@ -2,8 +2,6 @@ import { Conductores } from "@/src/types";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { DestructiveButton, OutlineButton } from "../ui/Buttons";
-
-import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 import { deleteConductor, updateConductor } from "@/src/api/conductorAPI";
 
@@ -14,8 +12,7 @@ type DriverRowProps = {
 export default function DriverRow( {conductor}: DriverRowProps  ){
     const [ conductorMostrar, setConductorMostrar ] = useState(conductor);
     const [ editar, setEditar ] = useState(false);
-    const { register, handleSubmit, reset, formState: {errors} } = useForm({ defaultValues: conductor });
-    const router = useRouter();
+    const { register, handleSubmit, } = useForm({ defaultValues: conductor });
 
     const handleGuardar = async (formData: Conductores) => {
         const res = await updateConductor(formData);

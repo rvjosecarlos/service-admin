@@ -2,14 +2,11 @@ import { Conductores } from "@/src/types";
 import { useForm } from "react-hook-form";
 import { PrimaryButton, SecondaryButton } from "../../ui/Buttons";
 import Link from "next/link";
-
-import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 import { createConductor } from "@/src/api/conductorAPI";
 
 export default function ConductoresForm(){
-    const { register, handleSubmit, reset, formState: { errors } } = useForm<Conductores>();
-    const router = useRouter();
+    const { register, handleSubmit, formState: { errors } } = useForm<Conductores>();
 
     const handleGuardar = async (formData: Conductores) => {
         

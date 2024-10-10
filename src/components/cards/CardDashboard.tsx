@@ -1,4 +1,4 @@
-import {DashboardDocuments, DashboardDocumentsData, DocumentTypeURL, Servicio} from "@/src/types";
+import {CardServicio, DocumentTypeURL, Servicio} from "@/src/types";
 import { estadosCobro, estadosFactura, estadosOrdenServicio, estadosPresupuesto, estadosServicios } from './../../data/data';
 import { ReactNode } from "react";
 
@@ -18,23 +18,20 @@ const estadosDocuments = {
 };
 
 function agruparEstados({type, documents}: Pick<CardDashboardProps, 'type'|'documents'>) {
-    const grupos: {[key: string]: DashboardDocuments}= {};
+    console.log(type);
+    const grupos: {[key: string]: CardServicio[]}= {};
 
-    const estados = estadosDocuments[type];
+    const estados = estadosDocuments["servicios"];
 
     for(const estado in estados) {
         const filtrados = documents.filter(document => {
             if("estado" in document) {
                 return document.estado === estado
             }
-            else if("pagado" in document) {
-
-            }
         });
-        // @ts-ignore
-        const estadoStr = estados[estado];
-        // @ts-ignore
-        grupos[estadoStr] = filtrados;
+        
+        const estadoStr = estados[estado as keyof typeof estados];
+        grupos[estadoStr] = filtrados as CardServicio[];
     }
   
     return grupos;

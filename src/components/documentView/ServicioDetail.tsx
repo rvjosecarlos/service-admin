@@ -1,5 +1,5 @@
 "use client"
-import { CalendarIcon, PlayIcon, HandThumbUpIcon, NoSymbolIcon, ArrowTopRightOnSquareIcon} from "@heroicons/react/24/outline";
+import { CalendarIcon, PlayIcon, HandThumbUpIcon, NoSymbolIcon} from "@heroicons/react/24/outline";
 import { EstadoServicio, Servicio, TipoServicio} from "@/src/types";
 import { estadosServicios, tipoServicio } from "@/src/data/data";
 import { evalDate, formatCurrency, formatDate } from "@/src/lib";

@@ -1,12 +1,9 @@
-import { useEffect, useState } from "react";
+
 import { useForm } from "react-hook-form";
 import ServicioForm from "./ServicioForm";
-import { OptionOrdenesServiciosIDs, ServiceFormData } from "@/src/types";
+import { ServiceFormData } from "@/src/types";
 import { PrimaryButton } from "../../ui/Buttons";
 import Link from "next/link";
-
-import { OptionOrdenesServicios } from "@/src/schema";
-
 import { toast } from 'react-toastify';
 import { createService } from "@/src/api/serviceAPI";
 

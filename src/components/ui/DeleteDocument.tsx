@@ -2,8 +2,6 @@
 import { DestructiveRoundButton } from "./Buttons"
 
 import { OrdenServicio, Presupuesto } from "@/src/types"
-import { useRouter } from "next/navigation";
-import { toast } from 'react-toastify';
 
 type DeleteDocumentProps ={
     documentType?: 'presupuesto' | 'factura' |  'ordenServicio' | 'gestionCobro' | 'servicio' | 'conductor' | 'emisor-receptor',
@@ -11,10 +9,10 @@ type DeleteDocumentProps ={
 }
 
 export default function DeleteDocument( { documentType, documentID }: DeleteDocumentProps ){
-    const router = useRouter();
     
     if( documentType === 'presupuesto' ){
         const handleClick = async ( id: Presupuesto['id'] ) => {
+            console.log(id);
             /*
             const res = await deletePresupuesto(id);
             if( res.success ){
@@ -34,6 +32,7 @@ export default function DeleteDocument( { documentType, documentID }: DeleteDocu
     }
     else if( documentType === 'ordenServicio' ){
         const handleClick = async ( id: OrdenServicio['id'] ) => {
+            console.log(id);
             /*
             if( !confirm('¿Esta seguro que desea eliminar el documento?') ){
                 return;

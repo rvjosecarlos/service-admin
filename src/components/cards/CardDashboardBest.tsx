@@ -1,6 +1,6 @@
 import { mesesEspanol } from "@/src/data/data";
 import { formatCurrency } from "@/src/lib";
-import { Factura, GestionCobros, OrdenServicio as OrdenServicioType, Servicio, Servicio as ServicioType } from "@/src/types";
+import { Servicio } from "@/src/types";
 
 type CardDashboardBestProps = { 
     servicios: Servicio[],

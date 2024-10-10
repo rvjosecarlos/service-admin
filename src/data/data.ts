@@ -24,10 +24,10 @@ export const estadosOrdenServicio = {
 };
 
 export const estadosServicios = {
-    assign: 'Asignado',
-    inProgress: 'En progreso',
-    complete: 'Completado',
-    noShow: 'No realizado'
+    "assign": 'Asignado',
+    "inProgress": 'En progreso',
+    "complete": 'Completado',
+    "noShow": 'No realizado'
 };
 
 export const estadosFactura = {

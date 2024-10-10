@@ -6,7 +6,7 @@ import { OutlineButton, PrimaryButton } from "@/src/components/ui/Buttons";
 import ModalAdd from "@/src/components/ui/ModalAdd";
 import Link from "next/link";
 import { formatDate } from "@/src/lib";
-import { CardServicio, FechasDuplicadasType, GetServices } from "@/src/types";
+import { CardServicio, FechasDuplicadasType } from "@/src/types";
 import Spinner from "@/src/components/ui/Spinner";
 import Filters from "../../src/components/filtros/Filters";
 import { estadosServicios } from "@/src/data/data";

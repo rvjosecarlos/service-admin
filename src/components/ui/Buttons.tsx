@@ -1,7 +1,7 @@
 "use client"
 
 import { useRouter } from "next/navigation";
-import { ButtonHTMLAttributes, Children, ReactNode } from "react";
+import { ButtonHTMLAttributes, ReactNode } from "react";
 
 type ButtonsProps = {
     children: ReactNode;
@@ -141,7 +141,7 @@ export function ConfirmRoundButton({ children, onClick, attributes }: ButtonsPro
     )
 }
 
-export function BackButton({ children, onClick, attributes }: ButtonsProps){
+export function BackButton({ children }: ButtonsProps){
     const router = useRouter();
     return (
         <button

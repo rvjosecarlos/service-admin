@@ -1,7 +1,5 @@
-import axios from "axios";
-import { estadosServicio } from "../data/data";
 import { api } from "../lib/axios";
-import { GetService, GetServices } from "../schema";
+import { GetService } from "../schema";
 import type { CardServicio, EstadoServicio, ServiceFormData } from "@/src/types";
 
 type SearchParams = {
@@ -27,7 +25,7 @@ export const getService = async (id: string) => {
         const url = `/api/servicio/detail/${id}`;
         const { data: datos } = await api.get(url);
         console.log(datos);
-        const { data, error } = GetService.safeParse(datos);
+        const { data } = GetService.safeParse(datos);
         if( data ){
             return data.data;
         }

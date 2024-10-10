@@ -11,7 +11,7 @@ export default function ConductoresView({ conductores }: ConductoresViewProps){
     return(
         <>
             { 
-                conductores.map( (conductor, index) => 
+                conductores.map( (conductor ) => 
                     <div key={conductor._id}>
                         <DriverRow conductor={conductor}/>   
                     </div>

@@ -1,5 +1,5 @@
 import { ArrowUturnLeftIcon } from "@heroicons/react/24/solid";
-import { BackButton, DestructiveRoundButton, OutlineRoundButton } from "../ui/Buttons";
+import { BackButton, OutlineRoundButton } from "../ui/Buttons";
 import { ReactNode } from "react";
 import Link from "next/link";
 import DeleteDocument from "../ui/DeleteDocument";
