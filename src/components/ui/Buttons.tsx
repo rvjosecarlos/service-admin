@@ -145,7 +145,7 @@ export function BackButton({ children, onClick, attributes }: ButtonsProps){
     const router = useRouter();
     return (
         <button
-            className="text-white bg-inputColor p-1 rounded-full hover:bg-primaryColor hidden md:block"
+            className="text-white bg-inputColor p-1 rounded-full hover:bg-primaryColor"
             onClick={() => router.push("/servicios")}
         >
             {children}
